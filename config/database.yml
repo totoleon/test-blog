@@ -17,22 +17,23 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-    <<: *default
-    adapter: postgresql
-    encoding: unicode
-    database: postgres
-    username: sa
-    password: lihailong123
-    host: railsdb.ckrbeigbq0ym.ap-southeast-2.rds.amazonaws.com
-    port: 5432
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  database: postgres
+  username: sa
+  password: lihailong123
+  host: railsdb.ckrbeigbq0ym.ap-southeast-2.rds.amazonaws.com
+  port: 5432
 
 
 production:
-    # <<: *default
-    adapter: postgresql
-    encoding: unicode
-	database: <%= ENV['RDS_DB_NAME'] %>
-	username: <%= ENV['RDS_USERNAME'] %>
-	password: <%= ENV['RDS_PASSWORD'] %>
-	host: <%= ENV['RDS_HOSTNAME'] %>
-	port: <%= ENV['RDS_PORT'] %>
+  # <<: *default
+  adapter: postgresql
+  encoding: unicode
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %> 
+
