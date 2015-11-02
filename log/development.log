@@ -4928,6 +4928,7 @@ Migrating to CreateConnectDbs (20151102050222)
 [0m
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2015-11-02 19:36:24 +1100
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by WelcomeController#index as HTML
@@ -5039,3 +5040,1396 @@ Processing by ArticlesController#index as HTML
   [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
   Rendered articles/index.html.erb within layouts/application (1.7ms)
 Completed 200 OK in 122ms (Views: 121.5ms | ActiveRecord: 0.1ms)
+=======
+Started GET "/" for 127.0.0.1 at 2015-11-02 19:44:35 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 219ms (Views: 211.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 19:44:37 +1100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 79ms (Views: 73.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-11-02 19:44:37 +1100
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (15.9ms)
+  Rendered articles/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 86ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 19:44:40 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 78ms (Views: 77.6ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/articles/8" for 127.0.0.1 at 2015-11-02 19:44:42 +1100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"m/tkCZJKicoh5tMaDwj8fPXN839lb/EGRA+nuHJeL3i+pCUNnsBsl3tweJS8CQGSbm6JkzalurPs5ve76u/Q8g==", "id"=>"8"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 8]]
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/articles
+Completed 302 Found in 49ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 19:44:42 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/9" for 127.0.0.1 at 2015-11-02 19:44:44 +1100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GG9C2AEXhnAuwHWyz2tNGsbs+3u8+4HF9Xemtg2i72M9MAPcDZ1jLXRW3jx8arD0XU+Bl+8xynBdnva1lRMQ6Q==", "id"=>"9"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 9]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 9]]
+  [1m[35m (2.3ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/articles
+Completed 302 Found in 7ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 19:44:44 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/7/edit" for 127.0.0.1 at 2015-11-02 19:44:45 +1100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered articles/_form.html.erb (2.2ms)
+  Rendered articles/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles/7/edit" for 127.0.0.1 at 2015-11-02 19:44:46 +1100
+
+ActionController::RoutingError (No route matches [POST] "/articles/7/edit"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (68.8ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (105.2ms)
+
+
+Started GET "/articles/7/edit" for 127.0.0.1 at 2015-11-02 19:47:15 +1100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered articles/_form.html.erb (2.5ms)
+  Rendered articles/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-02 19:47:17 +1100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tjMmf6QUZYwgiILUQb0QC/OGq4KMYmTmekP9R3pYj86TbGd7qJ6A0XoeKVryvO3laCXRbt+oL1PSqq1E4ulwRA==", "article"=>{"title"=>"Test1", "text"=>"This article should have comments."}, "commit"=>"Save Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Test1"], ["text", "This article should have comments."], ["created_at", "2015-11-02 08:47:17.333832"], ["updated_at", "2015-11-02 08:47:17.333832"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/articles/13
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/13" for 127.0.0.1 at 2015-11-02 19:47:17 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1  [["article_id", 13]]
+  Rendered comments/_form.html.erb (17.9ms)
+  Rendered articles/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 19:47:18 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/12/edit" for 127.0.0.1 at 2015-11-02 19:47:25 +1100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered articles/_form.html.erb (4.0ms)
+  Rendered articles/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-02 19:47:29 +1100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4vlWW8j+xEjSI/idaHxFr8HEpDGrXEuJ4Yv+CrpXcwzHphdfxHQhFYi1UxPbfbhBWmfe3fiWADxJYq4JIuaMhg==", "article"=>{"title"=>"Hellow11", "text"=>"Hi Today I made up my mind about going to have a look of ddthe zombies walk. It sounds interesting!"}, "commit"=>"Save Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Hellow11"], ["text", "Hi Today I made up my mind about going to have a look of ddthe zombies walk. It sounds interesting!"], ["created_at", "2015-11-02 08:47:29.073850"], ["updated_at", "2015-11-02 08:47:29.073850"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/articles/14
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/14" for 127.0.0.1 at 2015-11-02 19:47:29 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["article_id", 14]]
+  Rendered comments/_form.html.erb (2.3ms)
+  Rendered articles/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 19:47:32 +1100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/12/edit" for 127.0.0.1 at 2015-11-02 19:47:37 +1100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered articles/_form.html.erb (1.1ms)
+  Rendered articles/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-02 19:47:39 +1100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ezmRyBBtn8CPi+M3CA2OnfaZjJnhLVg1EvAnk+/pQ9JeZtDMHOd6ndUdSLm7DHNzbTr2dbLnE4C6GXeQd1i8WA==", "article"=>{"title"=>"Hellow22", "text"=>"Hi Today I made up my mind about going to have a look of ddthe zombies walk. It sounds interesting!"}, "commit"=>"Save Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hellow22"], ["text", "Hi Today I made up my mind about going to have a look of ddthe zombies walk. It sounds interesting!"], ["created_at", "2015-11-02 08:47:39.293501"], ["updated_at", "2015-11-02 08:47:39.293501"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/articles/15
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/15" for 127.0.0.1 at 2015-11-02 19:47:39 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1  [["article_id", 15]]
+  Rendered comments/_form.html.erb (1.7ms)
+  Rendered articles/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 19:47:40 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/14" for 127.0.0.1 at 2015-11-02 19:47:46 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["article_id", 14]]
+  Rendered comments/_form.html.erb (2.8ms)
+  Rendered articles/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/15" for 127.0.0.1 at 2015-11-02 19:47:49 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["article_id", 15]]
+  Rendered comments/_form.html.erb (1.4ms)
+  Rendered articles/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/15/edit" for 127.0.0.1 at 2015-11-02 19:49:37 +1100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 15]]
+  Rendered articles/_form.html.erb (1.1ms)
+  Rendered articles/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 49ms (Views: 48.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-02 19:49:42 +1100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XmHmeFPBSrZBcYMtrafIoNJmwlisDFCqTtzDJAwUMOV7Pqd8X0uv6xvnKKMepjVOScW4tP/GGx/mNZMnlKXPbw==", "article"=>{"title"=>"Hellow22", "text"=>"Hi Today I made up my mind about going to have a look of ddthe zombies walk. It sounds interesting!"}, "commit"=>"Save Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Hellow22"], ["text", "Hi Today I made up my mind about going to have a look of ddthe zombies walk. It sounds interesting!"], ["created_at", "2015-11-02 08:49:42.342529"], ["updated_at", "2015-11-02 08:49:42.342529"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/articles/16
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/16" for 127.0.0.1 at 2015-11-02 19:49:42 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["article_id", 16]]
+  Rendered comments/_form.html.erb (2.9ms)
+  Rendered articles/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 19:49:46 +1100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 19:52:10 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 42ms (Views: 41.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-02 19:52:10 +1100
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-02 19:52:10 +1100
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-02 19:52:10 +1100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-02 19:52:10 +1100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-02 19:52:10 +1100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-02 19:52:10 +1100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-02 19:52:10 +1100
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-02 19:52:10 +1100
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-02 19:52:10 +1100
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-02 19:52:10 +1100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-02 19:52:10 +1100
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-11-02 19:52:14 +1100
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (2.0ms)
+  Rendered articles/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-02 19:52:16 +1100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hwCKBMo92QXkJVjZnJ13HX1uLxPo4C6rS8plfIpshK6iX8sAxrc8WL6z81cvnIrz5s1V/7sqZR7jIzV/Et17JA==", "article"=>{"title"=>"asdd", "text"=>"fff"}, "commit"=>"Save Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered articles/_form.html.erb (3.9ms)
+  Rendered articles/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-02 19:52:21 +1100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/MPHfx+pETe03/O9+u6V3zPtrqKfr1XxeVs4eMP4FxLZnIZ7EyP0au5JWDNJ72gxqE7UTsxlHkTRsmh7W0nomA==", "article"=>{"title"=>"asddss", "text"=>"ffffff"}, "commit"=>"Save Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "asddss"], ["text", "ffffff"], ["created_at", "2015-11-02 08:52:21.068052"], ["updated_at", "2015-11-02 08:52:21.068052"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/articles/17
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/17" for 127.0.0.1 at 2015-11-02 19:52:21 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mArticle Load (1.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1  [["article_id", 17]]
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 55ms (Views: 51.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/articles/17/edit" for 127.0.0.1 at 2015-11-02 19:52:26 +1100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 17]]
+  Rendered articles/_form.html.erb (1.3ms)
+  Rendered articles/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-02 19:52:30 +1100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UKZNkMhRjqVkh+/9/ATBVL3efvaMwxrvqdcu/I1Mvax1+QyUxNtr+D4RRHNPBTy6Jn0EGt8JUVoBPn7/Ff1CJg==", "article"=>{"title"=>"asddss2", "text"=>"ffffff"}, "commit"=>"Save Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "asddss2"], ["text", "ffffff"], ["created_at", "2015-11-02 08:52:30.067397"], ["updated_at", "2015-11-02 08:52:30.067397"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/articles/18
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/articles/18" for 127.0.0.1 at 2015-11-02 19:52:30 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1  [["article_id", 18]]
+  Rendered comments/_form.html.erb (1.9ms)
+  Rendered articles/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 19:52:31 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 57ms (Views: 56.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/7" for 127.0.0.1 at 2015-11-02 19:55:41 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["article_id", 7]]
+  Rendered comments/_form.html.erb (3.2ms)
+  Rendered articles/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 19:55:43 +1100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-11-02 19:55:45 +1100
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (15.0ms)
+  Rendered articles/new.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007fe7403b9e38>:0x007fe73eb23680>):
+    13: <% end %>
+    14: 
+    15: <p>
+    16:   <%= f.label :title %><br>
+    17:   <%= f.text_field :title %>
+    18: </p>
+    19: 
+  app/views/articles/_form.html.erb:16:in `_app_views_articles__form_html_erb___3221842623990914655_70315582853180'
+  app/views/articles/new.html.erb:6:in `block in _app_views_articles_new_html_erb__1756287370579057547_70315583017040'
+  app/views/articles/new.html.erb:5:in `_app_views_articles_new_html_erb__1756287370579057547_70315583017040'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.9ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-11-02 19:55:45 +1100
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (21.0ms)
+  Rendered articles/new.html.erb within layouts/application (24.1ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007fe7403b9e38>:0x007fe73edab1f0>):
+    13: <% end %>
+    14: 
+    15: <p>
+    16:   <%= f.label :title %><br>
+    17:   <%= f.text_field :title %>
+    18: </p>
+    19: 
+  app/views/articles/_form.html.erb:16:in `_app_views_articles__form_html_erb___3221842623990914655_70315558155280'
+  app/views/articles/new.html.erb:6:in `block in _app_views_articles_new_html_erb__1756287370579057547_70315584343840'
+  app/views/articles/new.html.erb:5:in `_app_views_articles_new_html_erb__1756287370579057547_70315584343840'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:04:31 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/7" for 127.0.0.1 at 2015-11-02 20:04:33 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["article_id", 7]]
+  Rendered comments/_form.html.erb (1.9ms)
+  Rendered articles/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-11-02 20:04:35 +1100
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (2.0ms)
+  Rendered articles/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/articles" for 127.0.0.1 at 2015-11-02 20:04:47 +1100
+
+ActionController::RoutingError (No route matches [PATCH] "/articles"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (71.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.9ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.4ms)
+
+
+Started GET "/articles/11/edit" for 127.0.0.1 at 2015-11-02 20:05:35 +1100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered articles/_form.html.erb (1.1ms)
+  Rendered articles/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles" for 127.0.0.1 at 2015-11-02 20:05:41 +1100
+
+ActionController::RoutingError (No route matches [PATCH] "/articles"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (69.8ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.9ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.1ms)
+
+
+Started DELETE "/articles/11" for 127.0.0.1 at 2015-11-02 20:06:30 +1100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mQMdZzoaXcJnGJoD/oTzn9ZZgEoYz1leWXD6/TAZZUm8XFxjNpC4nz2OMY1NhQ5xTfr6pksFEuvxmar+qKiaww==", "id"=>"11"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 11]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 11]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:06:30 +1100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/10" for 127.0.0.1 at 2015-11-02 20:06:31 +1100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3zEEGWkDMcAflGMo7sLNxbg3BN32hbHPbeWmyYwq/t76bkUdZYnUnUUCyKZdwzArI5R+MaVP+nrFDPbKFJsBVA==", "id"=>"10"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 2]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 10]]
+  [1m[35m (2.3ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/articles
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:06:31 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/12" for 127.0.0.1 at 2015-11-02 20:06:33 +1100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NthGzFEb9wbnDXVndD+imu7vaIpLaMuf4H+4DyWOzisThwfIXZESW72b3unHPl90dUwSZhiigCpIlugMvT8xoQ==", "id"=>"12"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 12]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 12]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/articles
+Completed 302 Found in 5ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:06:33 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/articles/14" for 127.0.0.1 at 2015-11-02 20:06:35 +1100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fYIJ2rEx4gj2t6FuE2cp8SLVoTSrHSRv8jAvJAhjbWlY3UjevbsHVawhCuCgZtQfuXbb2PjXb9pa2X8nkNKS4w==", "id"=>"14"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 14]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 14]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/articles
+Completed 302 Found in 7ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:06:35 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/16" for 127.0.0.1 at 2015-11-02 20:06:37 +1100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pxYk5NQxx7TEv9y3256bysNq2HC/pdbu6V7JYzxtYkOCSWXg2Lsi6Z4pdzlon2YkWMminOxvnVtBt5lgpNydyQ==", "id"=>"16"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 16]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/articles
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:06:37 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/15" for 127.0.0.1 at 2015-11-02 20:06:38 +1100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SSIz9VL3uwjQnGpE4JrjXyQ73K3SJTDIHK0WstDH0dxsfXLxXn1eVYoKwcpTmx6xv5imQYHve320REaxSHYuVg==", "id"=>"15"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 15]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 15]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/articles
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:06:38 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/13" for 127.0.0.1 at 2015-11-02 20:06:40 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["article_id", 13]]
+  Rendered comments/_form.html.erb (1.7ms)
+  Rendered articles/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles/13/comments" for 127.0.0.1 at 2015-11-02 20:06:45 +1100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"03B17ESfQGtlzx4/UodvS6cDeYZl+3bP0Xt+XX79ANz2LzToSBWlNj9ZtbHhhpKlPKADajYxPXp5ki5e5kz/Vg==", "comment"=>{"commenter"=>"ewrwerwer", "body"=>"wetertewt"}, "commit"=>"Create Comment", "article_id"=>"13"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["commenter", "ewrwerwer"], ["body", "wetertewt"], ["article_id", 13], ["created_at", "2015-11-02 09:06:45.580029"], ["updated_at", "2015-11-02 09:06:45.580029"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/articles/13
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/articles/13" for 127.0.0.1 at 2015-11-02 20:06:45 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["article_id", 13]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 13]]
+  Rendered comments/_comment.html.erb (0.9ms)
+  Rendered comments/_form.html.erb (1.7ms)
+  Rendered articles/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/13/edit" for 127.0.0.1 at 2015-11-02 20:06:46 +1100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered articles/_form.html.erb (2.1ms)
+  Rendered articles/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles" for 127.0.0.1 at 2015-11-02 20:06:48 +1100
+
+ActionController::RoutingError (No route matches [PATCH] "/articles"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (67.9ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.0ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.6ms)
+
+
+Started PATCH "/articles" for 127.0.0.1 at 2015-11-02 20:07:01 +1100
+
+ActionController::RoutingError (No route matches [PATCH] "/articles"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (64.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.2ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:08:12 +1100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-11-02 20:08:13 +1100
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (3.9ms)
+  Rendered articles/new.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles"} missing required keys: [:id]):
+    1: <%= form_for :article, url: article_path do |f| %>
+    2: <%# url is an option for this form_for object %>
+    3: 
+    4: 
+  app/views/articles/_form.html.erb:1:in `_app_views_articles__form_html_erb___3221842623990914655_70315593981680'
+  app/views/articles/new.html.erb:6:in `block in _app_views_articles_new_html_erb__1756287370579057547_70315583017040'
+  app/views/articles/new.html.erb:5:in `_app_views_articles_new_html_erb__1756287370579057547_70315583017040'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-11-02 20:08:13 +1100
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (5.3ms)
+  Rendered articles/new.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles"} missing required keys: [:id]):
+    1: <%= form_for :article, url: article_path do |f| %>
+    2: <%# url is an option for this form_for object %>
+    3: 
+    4: 
+  app/views/articles/_form.html.erb:1:in `_app_views_articles__form_html_erb___3221842623990914655_70315552860360'
+  app/views/articles/new.html.erb:6:in `block in _app_views_articles_new_html_erb__1756287370579057547_70315584343840'
+  app/views/articles/new.html.erb:5:in `_app_views_articles_new_html_erb__1756287370579057547_70315584343840'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.9ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-11-02 20:09:11 +1100
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (2.5ms)
+  Rendered articles/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-11-02 20:09:11 +1100
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (2.1ms)
+  Rendered articles/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-02 20:09:16 +1100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1hGnQic1djwNhdYl+g9TFwVMJ3j0QnEz7UTQnYvJfITzTuZGK7+TYVcTfatJDq75nu9dlKeIOoZFrYCeE3iDDg==", "article"=>{"title"=>"asdasdas", "text"=>"ffffff"}, "commit"=>"Save Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "asdasdas"], ["text", "ffffff"], ["created_at", "2015-11-02 09:09:16.634683"], ["updated_at", "2015-11-02 09:09:16.634683"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/articles/19
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/19" for 127.0.0.1 at 2015-11-02 20:09:16 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["article_id", 19]]
+  Rendered comments/_form.html.erb (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:09:18 +1100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 49ms (Views: 48.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/17/edit" for 127.0.0.1 at 2015-11-02 20:09:21 +1100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 17]]
+  Rendered articles/_form.html.erb (1.5ms)
+  Rendered articles/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles" for 127.0.0.1 at 2015-11-02 20:09:25 +1100
+
+ActionController::RoutingError (No route matches [PATCH] "/articles"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (67.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:09:32 +1100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/17/edit" for 127.0.0.1 at 2015-11-02 20:09:53 +1100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 17]]
+  Rendered articles/_form.html.erb (2.0ms)
+  Rendered articles/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/17/edit" for 127.0.0.1 at 2015-11-02 20:09:56 +1100
+
+ActionController::RoutingError (No route matches [POST] "/articles/17/edit"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/hailol/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.0ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:11:36 +1100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-11-02 20:11:38 +1100
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (1.8ms)
+  Rendered articles/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-02 20:11:41 +1100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5dBTQMLzyf9KhO53MpP1SXglPs1lzpaqDB4KkWYJ+L7AjxJEznksohASRfmBkgin44ZEITYE3R+k91qS/rgHNA==", "article"=>{"title"=>"asdasdasd", "text"=>"fsdfsdafasd"}, "commit"=>"Create Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "asdasdasd"], ["text", "fsdfsdafasd"], ["created_at", "2015-11-02 09:11:41.261004"], ["updated_at", "2015-11-02 09:11:41.261004"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/articles/20
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/articles/20" for 127.0.0.1 at 2015-11-02 20:11:41 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["article_id", 20]]
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/20/edit" for 127.0.0.1 at 2015-11-02 20:11:42 +1100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 20]]
+  Rendered articles/_form.html.erb (1.6ms)
+  Rendered articles/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles/20" for 127.0.0.1 at 2015-11-02 20:11:47 +1100
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Dd1llsyBAJc37n0MVT6nNhYNaE6qGSzGNJgNRHD6YLJaDSSV7jhXwZJEnqCVQdyQ/tPTWliLwawOzA2iXIWCA==", "article"=>{"title"=>"vvvvvvv", "text"=>"fsdfsdafasd"}, "commit"=>"Update Article", "id"=>"20"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "articles" SET "title" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["title", "vvvvvvv"], ["updated_at", "2015-11-02 09:11:47.677456"], ["id", 20]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/articles/20
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/articles/20" for 127.0.0.1 at 2015-11-02 20:11:47 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1  [["article_id", 20]]
+  Rendered comments/_form.html.erb (1.6ms)
+  Rendered articles/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:11:49 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-11-02 20:11:52 +1100
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (3.3ms)
+  Rendered articles/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-02 20:11:59 +1100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zssN8ibS0Tts0p9zc+StaAM4KpzL9LlymHRsYVXp76vrlEz2Klg0ZjZENP3A5VCGmJtQcJg+8scwnTxizVgQIQ==", "article"=>{"title"=>"mo mo mo ", "text"=>"la la la "}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "mo mo mo "], ["text", "la la la "], ["created_at", "2015-11-02 09:11:59.546136"], ["updated_at", "2015-11-02 09:11:59.546136"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/articles/21
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/21" for 127.0.0.1 at 2015-11-02 20:11:59 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 21]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1  [["article_id", 21]]
+  Rendered comments/_form.html.erb (1.6ms)
+  Rendered articles/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:12:00 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 54ms (Views: 53.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/7" for 127.0.0.1 at 2015-11-02 20:12:02 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["article_id", 7]]
+  Rendered comments/_form.html.erb (1.7ms)
+  Rendered articles/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:12:04 +1100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/13/edit" for 127.0.0.1 at 2015-11-02 20:12:05 +1100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered articles/_form.html.erb (1.6ms)
+  Rendered articles/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles/13" for 127.0.0.1 at 2015-11-02 20:12:08 +1100
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kf2kApeT9Ot9qJTJ8+g1FXU+TqPS+Qx6nnwABvdebFYMouUGmxkRtic+P0dA6cj77p00T4EzR882lVAFb++T3A==", "article"=>{"title"=>"Test2", "text"=>"This article should have comments."}, "commit"=>"Update Article", "id"=>"13"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "articles" SET "title" = ?, "updated_at" = ? WHERE "articles"."id" = ?  [["title", "Test2"], ["updated_at", "2015-11-02 09:12:08.711681"], ["id", 13]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/articles/13
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/13" for 127.0.0.1 at 2015-11-02 20:12:08 +1100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ?  ORDER BY "comments"."id" ASC LIMIT 1[0m  [["article_id", 13]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 13]]
+  Rendered comments/_comment.html.erb (0.5ms)
+  Rendered comments/_form.html.erb (2.2ms)
+  Rendered articles/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 64ms (Views: 63.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:12:10 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:20:32 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/hailol/Documents/Projects/Rails/test-blog/app/assets/images
+  /Users/hailol/Documents/Projects/Rails/test-blog/app/assets/javascripts
+  /Users/hailol/Documents/Projects/Rails/test-blog/app/assets/stylesheets
+  /Users/hailol/Documents/Projects/Rails/test-blog/vendor/assets/javascripts
+  /Users/hailol/Documents/Projects/Rails/test-blog/vendor/assets/stylesheets
+  /Users/hailol/.rvm/gems/ruby-2.2.2/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/hailol/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.0.5/vendor/assets/javascripts
+  /Users/hailol/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.1.0/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>Blog</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.css.sass:18
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1562944492688231067_70106278003280'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.9ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.2ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (51.2ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (113.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:21:05 +1100
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/hailol/Documents/Projects/Rails/test-blog/app/assets/images
+  /Users/hailol/Documents/Projects/Rails/test-blog/app/assets/javascripts
+  /Users/hailol/Documents/Projects/Rails/test-blog/app/assets/stylesheets
+  /Users/hailol/Documents/Projects/Rails/test-blog/vendor/assets/javascripts
+  /Users/hailol/Documents/Projects/Rails/test-blog/vendor/assets/stylesheets
+  /Users/hailol/.rvm/gems/ruby-2.2.2/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/hailol/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.0.5/vendor/assets/javascripts
+  /Users/hailol/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.1.0/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>Blog</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.css.sass:18
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1562944492688231067_70106278003280'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.0ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.8ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:21:07 +1100
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/hailol/Documents/Projects/Rails/test-blog/app/assets/images
+  /Users/hailol/Documents/Projects/Rails/test-blog/app/assets/javascripts
+  /Users/hailol/Documents/Projects/Rails/test-blog/app/assets/stylesheets
+  /Users/hailol/Documents/Projects/Rails/test-blog/vendor/assets/javascripts
+  /Users/hailol/Documents/Projects/Rails/test-blog/vendor/assets/stylesheets
+  /Users/hailol/.rvm/gems/ruby-2.2.2/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/hailol/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.0.5/vendor/assets/javascripts
+  /Users/hailol/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.1.0/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>Blog</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.css.sass:18
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1562944492688231067_70106278003280'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.9ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (96.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-11-02 20:21:53 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/hailol/Documents/Projects/Rails/test-blog/app/assets/images
+  /Users/hailol/Documents/Projects/Rails/test-blog/app/assets/javascripts
+  /Users/hailol/Documents/Projects/Rails/test-blog/app/assets/stylesheets
+  /Users/hailol/Documents/Projects/Rails/test-blog/vendor/assets/javascripts
+  /Users/hailol/Documents/Projects/Rails/test-blog/vendor/assets/stylesheets
+  /Users/hailol/.rvm/gems/ruby-2.2.2/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/hailol/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.0.5/vendor/assets/javascripts
+  /Users/hailol/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.1.0/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>Blog</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.css.sass:18
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1536733617214065163_70113470824820'
+
+
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.7ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.1ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.0ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/hailol/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (108.0ms)
+>>>>>>> master
